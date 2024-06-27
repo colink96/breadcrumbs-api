@@ -85,7 +85,7 @@ namespace BreadcrumbsApi.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
+                new Claim("Name", user.Username),
             };
 
             var token = new JwtSecurityToken(
